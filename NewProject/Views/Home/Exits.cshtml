@@ -1,0 +1,22 @@
+﻿@model NewProject.Models.Test
+
+@{
+    ViewBag.Title = "Exits";
+}
+
+<h2>Exits</h2>
+<fieldset>
+    <legend> User DashBoard </legend>
+
+    @if (Session["Accountname"] != null)
+    {
+        <text>
+            Welcome @Session["Accountname"].ToString() </text>
+    }
+</fieldset>
+<div>@Session["Accountname"].ToString() </div>
+<div>@Session["Id"].ToString() </div>
+<div>@Session["password"].ToString() </div>
+<div>@Session["Name"].ToString() </div>
+
+<div>@Session["Phoneno"].ToString() </div>

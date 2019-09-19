@@ -1,0 +1,21 @@
+﻿@model NewProject.Models.Mydata
+
+@{
+    ViewBag.Title = "Mydetails";
+}
+
+<h2>Mydetails</h2>
+
+<div class="test">
+
+    @foreach (var item in ViewBag.Accountname)
+    {
+        <div class="test1">
+            <h2>@item.Id</h2>
+            <div>@item.Name</div>
+            <div>@item.Address</div>
+        
+            @Html.ActionLink("One data", "Trys", "Home", new { Id = item.Id, Name = item.Name }, null)
+        </div>
+    }
+</div>

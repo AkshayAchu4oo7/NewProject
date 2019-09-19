@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="176c99a5f88244469a2b41e13432e224" Name="Diagram1">
+        <EntityTypeShape EntityType="Database1Model.Test" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Mydata" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Database1Model.Answer" Width="1.5" PointX="5.25" PointY="4" />
+        <EntityTypeShape EntityType="Database1Model.Choice" Width="1.5" PointX="5.25" PointY="6.625" />
+        <EntityTypeShape EntityType="Database1Model.Question" Width="1.5" PointX="3" PointY="5.125" />
+        <EntityTypeShape EntityType="Database1Model.Quiz" Width="1.5" PointX="0.75" PointY="5.375" />
+        <EntityTypeShape EntityType="Database1Model.User" Width="1.5" PointX="5.75" PointY="0.75" />
+        <AssociationConnector Association="Database1Model.FK_Answers_Questions" />
+        <AssociationConnector Association="Database1Model.FK_Choices_Questions" />
+        <AssociationConnector Association="Database1Model.FK_Questions_Quiz" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
