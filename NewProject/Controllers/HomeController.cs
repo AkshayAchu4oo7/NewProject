@@ -125,7 +125,7 @@ namespace NewProject.Controllers
         [HttpPost]
         public ActionResult Example(String search)
         {
-            return View();
+            return View(db.Tests.Where(x => x.Accountname.StartsWith(search) || search == null).ToList());
         }
         public ActionResult Trys(int Id, String Name,String name1,String name2, String name3)
         {
