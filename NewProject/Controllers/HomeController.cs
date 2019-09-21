@@ -113,6 +113,7 @@ namespace NewProject.Controllers
         {
          return View(db.Tests.Where(x => x.Accountname.StartsWith(search) || search == null).ToList());
         }
+        [HttpGet]
         public ActionResult Example()
         {
 
@@ -120,6 +121,11 @@ namespace NewProject.Controllers
             List<Test> StudentList = db.Tests.ToList();
             //pass the StudentList list object to the view.  
             return View(StudentList);
+        }
+        [HttpPost]
+        public ActionResult Example(String search)
+        {
+            return View();
         }
         public ActionResult Trys(int Id, String Name,String name1,String name2, String name3)
         {
