@@ -9,6 +9,7 @@ namespace NewProject.Controllers
 {
     public class HomeController : Controller
     {
+        Database1Entities db = new Database1Entities();
         public ActionResult Index()
         {
             return View();
@@ -98,27 +99,45 @@ namespace NewProject.Controllers
 
 
      
-      
+      [HttpGet]
         public ActionResult Tables()
         {
-            Database1Entities td = new Database1Entities();
-            var data = td.Tests.ToList();
-            ViewBag.Accountname = data;
-            return View();
+           
+
+            List<Test> StudentList = db.Tests.ToList();
+            //pass the StudentList list object to the view.  
+            return View(StudentList);
         }
+        [HttpPost]
+        public ActionResult Tables(String search)
+        {
+         return View(db.Tests.Where(x => x.Accountname.StartsWith(search) || search == null).ToList());
+        }
+        public ActionResult Example()
+        {
 
 
-        public ActionResult Trys(int Id, String Name)
+            List<Test> StudentList = db.Tests.ToList();
+            //pass the StudentList list object to the view.  
+            return View(StudentList);
+        }
+        public ActionResult Trys(int Id, String Name,String name1,String name2, String name3)
         {
             
             var data = Id.ToString();
             var test = Name.ToString();
-            var testAcc = Name.ToString();
-            ViewBag.tests = testAcc;
+            var testAcc = name1.ToString();
+            var testAcc1 = name2.ToString();
+            var testAcc2 = name3.ToString();
+
+            ViewBag.Id = data;
+            ViewBag.Account = test;
+            ViewBag.nickname = testAcc;
+            ViewBag.phoneno = testAcc1;
+            ViewBag.password = testAcc2;
 
           
-            ViewBag.Accountname = data;
-            ViewBag.Account = test;
+            
             return View();
         }
 
@@ -129,14 +148,29 @@ namespace NewProject.Controllers
             ViewBag.Accountname = data;
             return View();
         }
-
-        public ActionResult Search(String Source,String Destination)
+        [HttpGet]
+        public ActionResult Search()
         {
-            //var first = Source.ToString();
-            //var second = Destination.ToString();
-
-
-            return View();
+            List<Test> StudentList = db.Tests.ToList();
+            //pass the StudentList list object to the view.  
+            return View(StudentList);
         }
+        [HttpPost]
+        public ActionResult Search(string option, string search)
+        {
+            if (option == "Password")
+            {
+                //Index action method will return a view with a student records based on what a user specify the value in textbox  
+                return View(db.Tests.Where( x => x.Password == search || search == null).ToList());
+            }
+            else if (option == "Accountname")
+            {
+                return View(db.Tests.Where(x => x.Password == search || search == null).ToList());
+            }
+            else
+            {
+                return View(db.Tests.Where(x => x.Accountname.StartsWith(search) || search == null).ToList());
+            }
         }
-}
+    }
+        }

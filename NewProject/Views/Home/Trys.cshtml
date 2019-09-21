@@ -3,29 +3,67 @@
 @{
     ViewBag.Title = "Trys";
 }
-
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "w3-input w3-padding-16 w3-border" } })
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+}
 
 
 
 <div class="test1">
 
 
-   <h1>@ViewBag.Accountname</h1>
-  <h1>@ViewBag.Account</h1> 
-    <h1>@ViewBag.tests</h1>
-   
-           
-            @Html.ActionLink("One data", "Tables", "Home")
+    <h1> @ViewBag.Id</h1>
+    <h1>
+        @ViewBag.Account
+    </h1>
+    <h1>
+        @ViewBag.nickname
+    </h1>
+    <h1>
+        @ViewBag.phoneno
+    </h1>
+    <h1>
+        @ViewBag.password
+    </h1>
 
 
-@*@foreach (var item in ViewBag.Accountname)
-{
-    @item.Id <br />
-    @item.Name <br />
-    @item.Accountname<br />
-    @item.Password<br />
-    @item.Phoneno<br />
+                    @Html.ActionLink("One data", "Tables", "Home")
 
-}*@
 
-        </div>
+                    @*@foreach (var item in ViewBag.Accountname)
+            {
+                @item.Id <br />
+                @item.Name <br />
+                @item.Accountname<br />
+                @item.Password<br />
+                @item.Phoneno<br />
+
+            }*@
+
+</div>
+<style>
+    .test1 {
+        width: 250px;
+        height: auto;
+        color: black;
+        background-image: url('../../Content/map.jpg');
+      
+        border-width: 4px;
+        border: groove;
+        cursor: pointer;
+        font-family: Verdana,sans-serif;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+</style>

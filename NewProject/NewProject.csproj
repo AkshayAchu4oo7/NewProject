@@ -254,6 +254,12 @@
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\coffeehouse2.jpg" />
+    <Content Include="Content\high.jpg" />
+    <Content Include="Content\land.jpg" />
+    <Content Include="Content\map.jpg" />
+    <Content Include="Content\road.jpg" />
+    <Content Include="Content\w3.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -337,6 +343,7 @@
     <Content Include="Views\Quizz\GetUser.cshtml" />
     <Content Include="Views\Quizz\SelectQuizz.cshtml" />
     <Content Include="Views\Quizz\QuizTest.cshtml" />
+    <Content Include="Views\Home\Example.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
