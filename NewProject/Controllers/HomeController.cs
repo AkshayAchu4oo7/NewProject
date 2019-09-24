@@ -113,47 +113,35 @@ namespace NewProject.Controllers
         {
          return View(db.Tests.Where(x => x.Accountname.StartsWith(search) || search == null).ToList());
         }
-        [HttpGet]
-        public ActionResult Example()
-        {
-
-
-            List<Test> StudentList = db.Tests.ToList();
-            //pass the StudentList list object to the view.  
-            return View(StudentList);
-        }
-        [HttpPost]
-        public ActionResult Example(String search)
-        {
-            return View(db.Tests.Where(x => x.Accountname.StartsWith(search) || search == null).ToList());
-        }
+        
         public ActionResult Trys(int Id, String Name,String name1,String name2, String name3)
         {
             
-            var data = Id.ToString();
-            var test = Name.ToString();
-            var testAcc = name1.ToString();
-            var testAcc1 = name2.ToString();
-            var testAcc2 = name3.ToString();
+                var data = Id.ToString();
+                var test = Name.ToString();
+                var testAcc = name1.ToString();
+                var testAcc1 = name2.ToString();
+                var testAcc2 = name3.ToString();
+            if (Name != null)
+            {
+                ViewBag.Id = data;
+                ViewBag.Account = test;
+                ViewBag.nickname = testAcc;
+                ViewBag.phoneno = testAcc1;
+                ViewBag.password = testAcc2;
 
-            ViewBag.Id = data;
-            ViewBag.Account = test;
-            ViewBag.nickname = testAcc;
-            ViewBag.phoneno = testAcc1;
-            ViewBag.password = testAcc2;
 
-          
+
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
             
-            return View();
         }
 
-        public ActionResult Mydetails()
-        {
-            Database1Entities td = new Database1Entities();
-            var data = td.Mydatas.ToList();
-            ViewBag.Accountname = data;
-            return View();
-        }
+       
         [HttpGet]
         public ActionResult Search()
         {

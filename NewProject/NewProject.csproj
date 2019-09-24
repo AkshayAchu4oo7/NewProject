@@ -339,12 +339,10 @@
     <Content Include="Views\Home\Exits.cshtml" />
     <Content Include="Views\Home\Tables.cshtml" />
     <Content Include="Views\Home\Trys.cshtml" />
-    <Content Include="Views\Home\Mydetails.cshtml" />
     <Content Include="Views\Home\Search.cshtml" />
     <Content Include="Views\Quizz\GetUser.cshtml" />
     <Content Include="Views\Quizz\SelectQuizz.cshtml" />
     <Content Include="Views\Quizz\QuizTest.cshtml" />
-    <Content Include="Views\Home\Example.cshtml" />
     <Content Include="Views\Test\GetUser.cshtml" />
     <Content Include="Views\Test\SelectQuizz.cshtml" />
   </ItemGroup>

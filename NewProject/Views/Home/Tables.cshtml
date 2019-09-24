@@ -2,14 +2,19 @@
 
 
 
-@using (Html.BeginForm("Tables","Home", FormMethod.Post))
+@using (Html.BeginForm("Tables", "Home", FormMethod.Post))
 {
-    @Html.TextBox("search")
-    <input type = "submit"
-    name = "submit"
-    value = "Search" />  
-    <br />
-  
+    <div class="form-group">
+        <div class="col-md-10">
+            @Html.TextBox("search")
+        </div>
+
+
+        <input type="submit"
+               name="submit"
+               value="Search" class="btn btn-default" />
+        <br />
+    </div>
 }
 <h2>Tables</h2>
 
@@ -56,6 +61,12 @@
     }
 </div>
 <style>
+    .mytablesearch{
+        width:30px;
+        height:15px;
+        background-color:antiquewhite;
+        color:black;
+    }
     .test1 {
         width: auto;
         height: auto;

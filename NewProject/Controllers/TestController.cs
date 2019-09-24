@@ -53,15 +53,9 @@ namespace NewProject.Controllers
         [HttpGet]
         public ActionResult SelectQuizz()
         {
-            QuizVM quiz = new viewModels.QuizVM();
-            quiz.ListOfQuizz = dbContext.Quizs.Select(q => new SelectListItem
-            {
-                Text = q.QuizName,
-                Value = q.QuizID.ToString()
-
-            }).ToList();
-
-            return View(quiz);
+            List<Test> StudentList = dbContext.Tests.ToList();
+            //pass the StudentList list object to the view.  
+            return View(StudentList);
         }
 
         [HttpPost]
