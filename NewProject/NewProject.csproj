@@ -200,6 +200,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OfficialController.cs" />
     <Compile Include="Controllers\QuizzController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
@@ -345,6 +346,7 @@
     <Content Include="Views\Quizz\QuizTest.cshtml" />
     <Content Include="Views\Test\GetUser.cshtml" />
     <Content Include="Views\Test\SelectQuizz.cshtml" />
+    <Content Include="Views\Official\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
