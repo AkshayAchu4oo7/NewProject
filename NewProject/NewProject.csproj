@@ -347,6 +347,8 @@
     <Content Include="Views\Test\GetUser.cshtml" />
     <Content Include="Views\Test\SelectQuizz.cshtml" />
     <Content Include="Views\Official\Index.cshtml" />
+    <Content Include="Views\Shared\_UserInfo.cshtml" />
+    <Content Include="Views\Official\GetUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
