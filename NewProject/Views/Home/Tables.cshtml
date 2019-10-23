@@ -9,14 +9,13 @@
             @Html.TextBox("search")
         </div>
 
-
         <input type="submit"
                name="submit"
                value="Search" class="btn btn-default" />
         <br />
     </div>
 }
-<h2>Tables</h2>
+
 
 @*<div class="test">
 
@@ -48,15 +47,13 @@
             <h3>
                 @Html.DisplayFor(modelItem => item.Phoneno)
             </h3>
-         <h5>
-             @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-             @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-             @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-
-         </h5>
-            @Html.ActionLink("One data", "Trys", "Home", new { Id = item.Id, Name = item.Name, name1 = item.Accountname, name2 = item.Phoneno, name3 = item.Password }, null)
+            <h5>
 
 
+
+                @Html.ActionLink("One data", "Trys", "Home", new { Id = item.Id, Name = item.Name, name1 = item.Accountname, name2 = item.Phoneno, name3 = item.Password }, null)
+
+            </h5>
         </div>
     }
 </div>
