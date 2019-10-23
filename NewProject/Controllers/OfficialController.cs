@@ -36,8 +36,11 @@ namespace NewProject.Controllers
 
             if (userConnected != null)
             {
-                Session["UserConnected"] = userConnected;
-                return RedirectToAction("SelectQuizz");
+                ViewBag.Msg = "Welcome !!";
+                return View();
+                
+                //Session["UserConnected"] = userConnected;
+                //return RedirectToAction("SelectQuizz");
             }
             else
             {
