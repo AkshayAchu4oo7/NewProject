@@ -241,6 +241,5 @@ D:\nEW\NewProject\NewProject\bin\Microsoft.Owin.Security.OAuth.xml
 D:\nEW\NewProject\NewProject\bin\Microsoft.Owin.Security.Google.xml
 D:\nEW\NewProject\NewProject\bin\Microsoft.Owin.Security.Twitter.xml
 D:\nEW\NewProject\NewProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\nEW\NewProject\NewProject\obj\Debug\NewProject.csprojResolveAssemblyReference.cache
 D:\nEW\NewProject\NewProject\obj\Debug\NewProject.dll
 D:\nEW\NewProject\NewProject\obj\Debug\NewProject.pdb

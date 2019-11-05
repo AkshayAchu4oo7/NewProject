@@ -32,5 +32,7 @@ namespace NewProject.Models
         public virtual DbSet<Question> Questions { get; set; }
         public virtual DbSet<Quiz> Quizs { get; set; }
         public virtual DbSet<User> Users { get; set; }
+
+        public System.Data.Entity.DbSet<NewProject.Models.Student> Students { get; set; }
     }
 }
